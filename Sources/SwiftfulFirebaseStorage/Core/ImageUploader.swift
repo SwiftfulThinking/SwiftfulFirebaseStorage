@@ -10,9 +10,9 @@ import UIKit
 
 struct ImageUploader {
     
-    let service: ImageUploaderService
+    let service: StorageUploaderService
     
-    init(config: ImageUploaderServiceOption) {
+    init(config: StorageUploaderServiceOption) {
         self.service = config.service
     }
     
@@ -20,4 +20,7 @@ struct ImageUploader {
         try await service.saveImage(path: path, image: image, compression: compression)
     }
     
+    func saveAudio(path: String, localFileUrl: URL) async throws -> URL {
+        try await service.saveAudio(path: path, localFileUrl: localFileUrl)
+    }
 }

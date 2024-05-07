@@ -8,19 +8,20 @@
 import Foundation
 import UIKit
 
-protocol ImageUploaderService {
+protocol StorageUploaderService {
     func saveImage(path: String, image: UIImage, compression: ImageCompressionOption) async throws -> URL
+    func saveAudio(path: String, localFileUrl: URL) async throws -> URL
 }
 
-enum ImageUploaderServiceOption {
+enum StorageUploaderServiceOption {
     case mock, firebase
     
-    var service: ImageUploaderService {
+    var service: StorageUploaderService {
         switch self {
         case .mock:
-            return MockImageUploaderService()
+            return MockStorageUploaderService()
         case .firebase:
-            return FirebaseImageUploaderService()
+            return FirebaseStorageUploaderService()
         }
     }
 }
