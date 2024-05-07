@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol StorageUploaderService {
+protocol StorageUploaderService: Sendable {
     func saveImage(path: String, image: UIImage, compression: ImageCompressionOption) async throws -> URL
     func saveAudio(path: String, localFileUrl: URL) async throws -> URL
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct StorageUploader {
+public struct StorageUploader: Sendable {
     
     let service: StorageUploaderService
     
