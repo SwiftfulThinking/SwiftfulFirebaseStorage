@@ -12,8 +12,8 @@ public struct StorageUploader {
     
     let service: StorageUploaderService
     
-    public init(config: StorageUploaderServiceOption) {
-        self.service = config.service
+    public init(configuration: StorageUploaderServiceOption) {
+        self.service = configuration.service
     }
     
     public func saveImage(path: String, image: UIImage, compression: ImageCompressionOption = .jpg(compressionQuality: 1)) async throws -> URL {
