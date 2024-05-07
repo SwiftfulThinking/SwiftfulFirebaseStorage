@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseStorage
 
-enum ImageCompressionOption {
+public enum ImageCompressionOption {
     case png, jpg(compressionQuality: CGFloat)
     
     func compress(image: UIImage) -> Data? {

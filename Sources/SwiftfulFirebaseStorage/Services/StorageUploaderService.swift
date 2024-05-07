@@ -1,5 +1,5 @@
 //
-//  ImageUploaderService.swift
+//  StorageUploaderService.swift
 //  AIChatTest2
 //
 //  Created by Nick Sarno on 3/23/24.
