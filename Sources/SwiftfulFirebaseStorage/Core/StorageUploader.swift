@@ -12,7 +12,7 @@ public struct StorageUploader {
     
     let service: StorageUploaderService
     
-    init(config: StorageUploaderServiceOption) {
+    public init(config: StorageUploaderServiceOption) {
         self.service = config.service
     }
     

@@ -13,7 +13,7 @@ protocol StorageUploaderService {
     func saveAudio(path: String, localFileUrl: URL) async throws -> URL
 }
 
-enum StorageUploaderServiceOption {
+public enum StorageUploaderServiceOption {
     case mock, firebase
     
     var service: StorageUploaderService {
